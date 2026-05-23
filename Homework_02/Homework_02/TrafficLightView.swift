@@ -16,11 +16,11 @@ final class TrafficLightView: UIView {
     }
 
     func setActive() {
-        layer.opacity = 1.0
+        alpha = 1.0
     }
 
     func setInactive() {
-        layer.opacity = 0.5
+        alpha = 0.5
     }
 
     private func setupTrafficLightView() {
@@ -28,9 +28,8 @@ final class TrafficLightView: UIView {
         backgroundColor = trafficLightViewColor
         layer.cornerRadius = 90
         layer.masksToBounds = true
-        layer.opacity = 0.5
+        alpha = 0.5
     }
-
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
@@ -38,5 +37,4 @@ final class TrafficLightView: UIView {
         widthAnchor.constraint(equalToConstant: 180),
         ])
     }
-
 }

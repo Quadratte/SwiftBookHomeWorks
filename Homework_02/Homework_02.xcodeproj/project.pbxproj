@@ -6,30 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		10B0EC442FC19948006F0B77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0EC3C2FC19948006F0B77 /* AppDelegate.swift */; };
+		10B0EC452FC19948006F0B77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0EC3F2FC19948006F0B77 /* SceneDelegate.swift */; };
+		10B0EC462FC19948006F0B77 /* TrafficLightModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0EC402FC19948006F0B77 /* TrafficLightModel.swift */; };
+		10B0EC472FC19948006F0B77 /* TrafficLightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0EC412FC19948006F0B77 /* TrafficLightView.swift */; };
+		10B0EC482FC19948006F0B77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0EC422FC19948006F0B77 /* ViewController.swift */; };
+		10B0EC492FC19948006F0B77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10B0EC3D2FC19948006F0B77 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		10B0EC3C2FC19948006F0B77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10B0EC3D2FC19948006F0B77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10B0EC3E2FC19948006F0B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10B0EC3F2FC19948006F0B77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		10B0EC402FC19948006F0B77 /* TrafficLightModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightModel.swift; sourceTree = "<group>"; };
+		10B0EC412FC19948006F0B77 /* TrafficLightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrafficLightView.swift; sourceTree = "<group>"; };
+		10B0EC422FC19948006F0B77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		10D04B422FBCD76000D1DB07 /* Homework_02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homework_02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		10D04B542FBCD76100D1DB07 /* Exceptions for "Homework_02" folder in "Homework_02" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 10D04B412FBCD76000D1DB07 /* Homework_02 */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		10D04B442FBCD76000D1DB07 /* Homework_02 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				10D04B542FBCD76100D1DB07 /* Exceptions for "Homework_02" folder in "Homework_02" target */,
-			);
-			path = Homework_02;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		10D04B3F2FBCD76000D1DB07 /* Frameworks */ = {
@@ -42,10 +37,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10B0EC432FC19948006F0B77 /* Homework_02 */ = {
+			isa = PBXGroup;
+			children = (
+				10B0EC3C2FC19948006F0B77 /* AppDelegate.swift */,
+				10B0EC3F2FC19948006F0B77 /* SceneDelegate.swift */,
+				10B0EC402FC19948006F0B77 /* TrafficLightModel.swift */,
+				10B0EC412FC19948006F0B77 /* TrafficLightView.swift */,
+				10B0EC422FC19948006F0B77 /* ViewController.swift */,
+				10B0EC3D2FC19948006F0B77 /* Assets.xcassets */,
+				10B0EC3E2FC19948006F0B77 /* Info.plist */,
+			);
+			path = Homework_02;
+			sourceTree = "<group>";
+		};
 		10D04B392FBCD76000D1DB07 = {
 			isa = PBXGroup;
 			children = (
-				10D04B442FBCD76000D1DB07 /* Homework_02 */,
+				10B0EC432FC19948006F0B77 /* Homework_02 */,
 				10D04B432FBCD76000D1DB07 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,9 +81,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				10D04B442FBCD76000D1DB07 /* Homework_02 */,
 			);
 			name = Homework_02;
 			packageProductDependencies = (
@@ -122,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B0EC492FC19948006F0B77 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +139,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10B0EC442FC19948006F0B77 /* AppDelegate.swift in Sources */,
+				10B0EC452FC19948006F0B77 /* SceneDelegate.swift in Sources */,
+				10B0EC462FC19948006F0B77 /* TrafficLightModel.swift in Sources */,
+				10B0EC472FC19948006F0B77 /* TrafficLightView.swift in Sources */,
+				10B0EC482FC19948006F0B77 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

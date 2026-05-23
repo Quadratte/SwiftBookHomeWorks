@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         let btn = UIButton()
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.backgroundColor = .blue
-        btn.setTitle("Switch", for: .normal)
+        btn.setTitle("Start", for: .normal)
         btn.widthAnchor.constraint(equalToConstant: 200).isActive = true
         btn.heightAnchor.constraint(equalToConstant: 60).isActive = true
         btn.layer.cornerRadius = 30
@@ -56,6 +56,12 @@ class ViewController: UIViewController {
         }, for: .touchUpInside)
     }
 
+    private func changeButtonTitle() {
+        if switchButton.titleLabel?.text == "Start" {
+            switchButton.setTitle("Next", for: .normal)
+        }
+    }
+
     private func switchLight() {
         lightModel.switchLight()
 
@@ -77,6 +83,8 @@ class ViewController: UIViewController {
             yellowLight.setInactive()
             greenLight.setActive()
         }
+
+        changeButtonTitle()
     }
 
     private func setupConstraints() {
