@@ -10,12 +10,16 @@ final class AppLabel: UILabel {
         super.init(frame: .zero)
         setupAppLabel()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     private func setupAppLabel() {
         translatesAutoresizingMaskIntoConstraints = false
+        textColor = .black
+        text = labelText
+        numberOfLines = 1
+
     }
 }
