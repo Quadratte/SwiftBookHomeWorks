@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		103657F92FBFA5FB0095995B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103657F32FBFA5FB0095995B /* AppDelegate.swift */; };
 		103657FA2FBFA5FB0095995B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103657F62FBFA5FB0095995B /* SceneDelegate.swift */; };
-		103657FB2FBFA5FB0095995B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103657F72FBFA5FB0095995B /* ViewController.swift */; };
+		103657FB2FBFA5FB0095995B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103657F72FBFA5FB0095995B /* MainViewController.swift */; };
 		103657FC2FBFA5FB0095995B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 103657F42FBFA5FB0095995B /* Assets.xcassets */; };
 		10B0EC4D2FC19BB9006F0B77 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0EC4C2FC19BB9006F0B77 /* CustomSlider.swift */; };
 		10B0EC512FC19FDF006F0B77 /* AdjustColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10B0EC502FC19FDF006F0B77 /* AdjustColorModel.swift */; };
@@ -23,7 +23,7 @@
 		103657F42FBFA5FB0095995B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		103657F52FBFA5FB0095995B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		103657F62FBFA5FB0095995B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		103657F72FBFA5FB0095995B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		103657F72FBFA5FB0095995B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		10B0EC4C2FC19BB9006F0B77 /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		10B0EC502FC19FDF006F0B77 /* AdjustColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustColorModel.swift; sourceTree = "<group>"; };
 		10B0EC542FC1A1E8006F0B77 /* AppLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 		10B0EC4E2FC19E6C006F0B77 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				103657F72FBFA5FB0095995B /* ViewController.swift */,
+				103657F72FBFA5FB0095995B /* MainViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 			files = (
 				103657F92FBFA5FB0095995B /* AppDelegate.swift in Sources */,
 				103657FA2FBFA5FB0095995B /* SceneDelegate.swift in Sources */,
-				103657FB2FBFA5FB0095995B /* ViewController.swift in Sources */,
+				103657FB2FBFA5FB0095995B /* MainViewController.swift in Sources */,
 				10B0EC572FC1DE68006F0B77 /* SliderRowBuilder.swift in Sources */,
 				10B0EC4D2FC19BB9006F0B77 /* CustomSlider.swift in Sources */,
 				10B0EC552FC1A1E8006F0B77 /* AppLabel.swift in Sources */,

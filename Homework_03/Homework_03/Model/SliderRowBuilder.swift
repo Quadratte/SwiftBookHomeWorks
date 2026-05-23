@@ -1,6 +1,6 @@
 import UIKit
 
-final class SliderRowBuilder {
+struct SliderRowBuilder {
 
     static func build(title: String, slider: CustomSlider, valueLabel: AppLabel) -> UIStackView {
         let stack = UIStackView()

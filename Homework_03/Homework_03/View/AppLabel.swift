@@ -1,6 +1,7 @@
 import UIKit
 
 final class AppLabel: UILabel {
+    
     let labelText: String
     let alignment: NSTextAlignment
 
