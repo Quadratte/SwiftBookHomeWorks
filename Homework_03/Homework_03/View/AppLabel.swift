@@ -17,8 +17,8 @@ final class AppLabel: UILabel {
 
     private func setupAppLabel() {
         translatesAutoresizingMaskIntoConstraints = false
-        textColor = .black
         text = labelText
+        textColor = .label
         numberOfLines = 1
 
     }

@@ -2,8 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // composer
-    //let adjustColor = AdjustColorModel()
+    private var colorModel = AdjustColorModel()
 
     private let mainStack: UIStackView = {
         let stack = UIStackView()
@@ -32,10 +31,6 @@ class ViewController: UIViewController {
         return view
     }()
 
-    let redLabel = AppLabel("Red: ", .left)
-    let greenLabel = AppLabel("Green: ", .left)
-    let blueLabel = AppLabel("Blue: ", .left)
-
     let redValueLabel = AppLabel("0.50", .center)
     let greenValueLabel = AppLabel("0.50", .center)
     let blueValueLabel = AppLabel("0.50", .center)
@@ -44,9 +39,9 @@ class ViewController: UIViewController {
     let greenSlider = CustomSlider(.green)
     let blueSlider = CustomSlider(.blue)
 
-    private lazy var redSliderStack = makeSliderStack(labeltext: "Red", slider: redSlider, valueLabel: redValueLabel)
-    private lazy var greenSliderStack = makeSliderStack(labeltext: "Green", slider: greenSlider,valueLabel: greenValueLabel)
-    private lazy var blueSliderStack = makeSliderStack(labeltext: "Blue", slider: blueSlider, valueLabel: blueValueLabel)
+    private lazy var redSliderStack = SliderRowBuilder.build(title: "Red", slider: redSlider, valueLabel: redValueLabel)
+    private lazy var greenSliderStack = SliderRowBuilder.build(title: "Green", slider: greenSlider, valueLabel: greenValueLabel)
+    private lazy var blueSliderStack = SliderRowBuilder.build(title: "Blue", slider: blueSlider, valueLabel: blueValueLabel)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +52,7 @@ class ViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.addSubview(mainStack)
 
         mainStack.addArrangedSubview(colorView)
@@ -70,53 +65,29 @@ class ViewController: UIViewController {
 
     private func setupActions() {
         redSlider.addAction(UIAction { [weak self] _ in
-            self?.sliderValueChanges()
+            self?.updateUI()
         }, for: .valueChanged)
 
         greenSlider.addAction(UIAction { [weak self] _ in
-            self?.sliderValueChanges()
+            self?.updateUI()
         }, for: .valueChanged)
 
         blueSlider.addAction(UIAction { [weak self] _ in
-            self?.sliderValueChanges()
+            self?.updateUI()
         }, for: .valueChanged)
 
     }
 
-    private func sliderValueChanges() {
-        redValueLabel.text = String(format: "%.2f", redSlider.value)
-        greenValueLabel.text = String(format: "%.2f", greenSlider.value)
-        blueValueLabel.text = String(format: "%.2f", blueSlider.value)
-
-        colorView.backgroundColor = UIColor(red: CGFloat(redSlider.value),
-                                            green: CGFloat(greenSlider.value),
-                                            blue: CGFloat(blueSlider.value),
-                                            alpha: 1)
-    }
-
-    // factory method
-    private func makeSliderStack(labeltext: String, slider: CustomSlider, valueLabel: AppLabel) -> UIStackView {
-        let stack = UIStackView()
-        stack.axis = .horizontal
-        stack.spacing = 12
-        stack.alignment = .center
-        stack.distribution = .fill
-
-        let label = AppLabel(labeltext, .left)
-        label.widthAnchor.constraint(equalToConstant: 50).isActive = true
-
-        valueLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        valueLabel.textAlignment = .center
-
-        stack.addArrangedSubview(label)
-        stack.addArrangedSubview(valueLabel)
-        stack.addArrangedSubview(slider)
-
-        return stack
-    }
-
     private func updateUI() {
+        colorModel.setRed(redSlider.value)
+        colorModel.setGreen(greenSlider.value)
+        colorModel.setBlue(blueSlider.value)
 
+        redValueLabel.text = colorModel.getRedFormatted()
+        greenValueLabel.text = colorModel.getGreenFormatted()
+        blueValueLabel.text = colorModel.getBlueFormatted()
+
+        colorView.backgroundColor = colorModel.getUIColor()
     }
 
     private func setupConstraints() {
