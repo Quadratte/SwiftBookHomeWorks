@@ -2,7 +2,7 @@ import UIKit
 
 final class CustomSlider: UISlider {
 
-    enum CustomSliderStyles {
+    enum CustomSliderStyles {		
         case red, green, blue
     }
 

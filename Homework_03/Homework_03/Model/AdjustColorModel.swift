@@ -9,6 +9,7 @@ struct AdjustColorModel {
         red = max(0, min(1, value))
     }
 
+
     mutating func setGreen(_ value: Float) {
         green = max(0, min(1, value))
     }
